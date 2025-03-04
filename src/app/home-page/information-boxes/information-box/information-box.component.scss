@@ -1,0 +1,37 @@
+@import "../../../variables.scss";
+
+.topDoctors {
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  width: 400px;
+  height: 271px;
+  padding: 40px;
+  color: white;
+  background: $light-blue;
+}
+
+.service {
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  width: 400px;
+  height: 271px;
+  padding: 40px;
+  color: white;
+  background: $blue;
+}
+
+.serviceContainer {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1220px) {
+  .topDoctors,
+  .service {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topDoctors,
+  .service {
+    width: 100%;
+  }
+}

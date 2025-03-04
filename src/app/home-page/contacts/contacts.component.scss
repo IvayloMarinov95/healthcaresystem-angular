@@ -1,0 +1,31 @@
+.container {
+  height: 194px;
+  background: #fbfbfb;
+  border-bottom: 1px solid #e3e3e3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 0 18% 0 18%;
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+
+@media (max-width: 1480px) {
+  .container {
+    padding: 0 8% 0 8%;
+  }
+}
+
+@media (max-width: 1220px) {
+  .container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+    height: 250px;
+    margin-top: -28px;
+    padding: 0 0 0 20px;
+  }
+}

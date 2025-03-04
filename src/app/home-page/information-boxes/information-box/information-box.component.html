@@ -1,0 +1,8 @@
+<div
+  [ngClass]="{ topDoctors: type === 'topDoctors', service: type === 'service' }"
+>
+  <div class="serviceContainer">
+    <h3>{{ service }}</h3>
+  </div>
+  <div>{{ description }}</div>
+</div>
