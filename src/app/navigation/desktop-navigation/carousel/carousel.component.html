@@ -1,0 +1,18 @@
+<p-carousel
+  [value]="items"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  autoplayInterval="3000"
+  class="container"
+>
+  <ng-template let-item #item>
+    <div class="carousel">
+      <img [src]="item.img" alt="" />
+    </div>
+    <div class="caption">
+      <h5>Entrust your health to our professionals</h5>
+      <h1>{{ item.text }}</h1>
+    </div>
+  </ng-template>
+</p-carousel>

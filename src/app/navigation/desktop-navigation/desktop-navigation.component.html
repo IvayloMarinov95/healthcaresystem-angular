@@ -1,0 +1,71 @@
+<div
+  [ngClass]="{
+    containerScroll: scrolled || resized,
+    container: !scrolled && !resized
+  }"
+>
+  <a href="/" class="logoContainer">
+    <img src="assets/medicalClinicLogo.png" alt="" class="medicalClinic" />
+  </a>
+  <div>
+    <a href="/" [ngClass]="{ navTab: true, active: pathname === '/' }">
+      Home
+    </a>
+    <a
+      href="/departments"
+      [ngClass]="{ navTab: true, active: pathname === '/departments' }"
+    >
+      Departments
+    </a>
+    <a
+      href="/doctors"
+      [ngClass]="{ navTab: true, active: pathname === '/doctors' }"
+    >
+      Doctors
+    </a>
+    <a
+      href="/about"
+      [ngClass]="{ navTab: true, active: pathname === '/about' }"
+    >
+      About
+    </a>
+    <!-- {!userIsLoggedIn && (
+      <ButtonGroup>
+        <Button variant="secondary" onClick={() => handleClick('signIn')}>
+          Sign In
+        </Button>
+        <Button variant="dark" onClick={() => handleClick('signUp')}>
+          Sign Up
+        </Button>
+      </ButtonGroup>
+    )}
+    {userIsLoggedIn && (
+      <Dropdown className={styles.dropdown}>
+        <Dropdown.Toggle variant="dark" id="dropdown-basic">
+          <FaUserCircle />
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item onClick={openMyProfile}>
+            My profile
+          </Dropdown.Item>
+          <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    )} -->
+  </div>
+</div>
+<app-carousel />
+<!-- <app-authentication-modal
+  openModal="{openModal}"
+  handleHide="{handleHide}"
+  toggle="{toggle}"
+  username="{username}"
+  email="{email}"
+  password="{password}"
+  handleUsernameChange="{handleUsernameChange}"
+  handleEmailChange="{handleEmailChange}"
+  handlePasswordChange="{handlePasswordChange}"
+  handleModalContentChange="{handleModalContentChange}"
+>
+</app-authentication-modal> -->
