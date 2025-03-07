@@ -3,12 +3,15 @@
   [numVisible]="1"
   [numScroll]="1"
   [circular]="true"
-  autoplayInterval="3000"
-  class="container"
+  autoplayInterval="5000"
+  styleClass="container"
+  showNavigators="false"
+  showIndicators="false"
+  verticalViewPortHeight="560px"
 >
   <ng-template let-item #item>
-    <div class="carousel">
-      <img [src]="item.img" alt="" />
+    <div>
+      <img [src]="item.img" alt="" class="image" />
     </div>
     <div class="caption">
       <h5>Entrust your health to our professionals</h5>

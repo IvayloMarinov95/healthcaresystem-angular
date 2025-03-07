@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
 
 @Component({
   selector: 'app-desktop-navigation',
-  imports: [CommonModule, CarouselComponent],
+  imports: [CommonModule, CarouselComponent, RouterLink, RouterLinkActive],
   templateUrl: './desktop-navigation.component.html',
   styleUrl: './desktop-navigation.component.scss',
 })

@@ -1,0 +1,25 @@
+<div class="container">
+  <app-title tinyHeader="Professionals" header="Welcome to Medical Clinic" />
+  <div class="content">
+    <div class="carousel">
+      <p-carousel
+        [value]="items"
+        [numVisible]="1"
+        [numScroll]="1"
+        [circular]="true"
+        autoplayInterval="4000"
+        styleClass="container"
+        showNavigators="false"
+        showIndicators="false"
+        verticalViewPortHeight="560px"
+      >
+        <ng-template let-item #item>
+          <div>
+            <img [src]="item.img" alt="" class="image" />
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <div class="accordion"><app-accordion-menu></app-accordion-menu></div>
+  </div>
+</div>

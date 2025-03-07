@@ -8,27 +8,21 @@
     <img src="assets/medicalClinicLogo.png" alt="" class="medicalClinic" />
   </a>
   <div>
-    <a href="/" [ngClass]="{ navTab: true, active: pathname === '/' }">
+    <a
+      class="navTab"
+      routerLinkActive="active"
+      routerLink="/"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
       Home
     </a>
-    <a
-      href="/departments"
-      [ngClass]="{ navTab: true, active: pathname === '/departments' }"
-    >
+    <a class="navTab" routerLinkActive="active" routerLink="/departments">
       Departments
     </a>
-    <a
-      href="/doctors"
-      [ngClass]="{ navTab: true, active: pathname === '/doctors' }"
-    >
+    <a class="navTab" routerLinkActive="active" routerLink="/doctors">
       Doctors
     </a>
-    <a
-      href="/about"
-      [ngClass]="{ navTab: true, active: pathname === '/about' }"
-    >
-      About
-    </a>
+    <a class="navTab" routerLinkActive="active" routerLink="/about"> About </a>
     <!-- {!userIsLoggedIn && (
       <ButtonGroup>
         <Button variant="secondary" onClick={() => handleClick('signIn')}>

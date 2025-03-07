@@ -1,0 +1,63 @@
+@import "../variables.scss";
+
+.container {
+  padding: 0 18% 0 18%;
+  margin: 70px 0 100px 0;
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+
+.carousel {
+  width: 600px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion {
+  width: 550px;
+}
+
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 14% 0 14%;
+  }
+}
+
+@media (max-width: 1700px) {
+  .container {
+    padding: 0 10% 0 10%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .container {
+    padding: 0 4% 0 4%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 0 2% 0 2%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 2% 0 2%;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .carousel {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .accordion {
+    width: 100%;
+  }
+}

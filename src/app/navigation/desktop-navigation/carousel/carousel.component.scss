@@ -1,22 +1,21 @@
 .caption {
-  width: 400px;
-  text-align: left;
+  width: 600px;
+  position: fixed;
   bottom: 250px;
+  padding-left: 100px;
+  text-align: left;
+  color: white;
+  opacity: 0.8;
   font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
 }
 
-.carousel {
+.image {
   height: 560px;
+  width: 100%;
 }
 
 .container {
-  div {
-    ol {
-      bottom: 60px;
-      margin: 0;
-      padding: 0;
-    }
-  }
+  height: 560px;
 }
 
 @media (max-width: 1480px) {
