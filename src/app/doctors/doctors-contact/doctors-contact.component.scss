@@ -1,0 +1,15 @@
+.phoneContainer {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+@media (max-width: 500px) {
+  .phone {
+    font-size: 14px;
+  }
+}
