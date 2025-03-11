@@ -23,17 +23,14 @@
       Doctors
     </a>
     <a class="navTab" routerLinkActive="active" routerLink="/about"> About </a>
-    <!-- {!userIsLoggedIn && (
-      <ButtonGroup>
-        <Button variant="secondary" onClick={() => handleClick('signIn')}>
-          Sign In
-        </Button>
-        <Button variant="dark" onClick={() => handleClick('signUp')}>
-          Sign Up
-        </Button>
-      </ButtonGroup>
-    )}
-    {userIsLoggedIn && (
+    <!-- {!userIsLoggedIn && ( -->
+    <p-button
+      label="Sign In"
+      severity="secondary"
+      (click)="openSignInModal()"
+    />
+    <p-button label="Sing Up" severity="contrast" (click)="openSignUpModal()" />
+    <!-- {userIsLoggedIn && (
       <Dropdown className={styles.dropdown}>
         <Dropdown.Toggle variant="dark" id="dropdown-basic">
           <FaUserCircle />
@@ -50,16 +47,17 @@
   </div>
 </div>
 <app-carousel />
-<!-- <app-authentication-modal
-  openModal="{openModal}"
-  handleHide="{handleHide}"
-  toggle="{toggle}"
-  username="{username}"
-  email="{email}"
-  password="{password}"
-  handleUsernameChange="{handleUsernameChange}"
-  handleEmailChange="{handleEmailChange}"
-  handlePasswordChange="{handlePasswordChange}"
-  handleModalContentChange="{handleModalContentChange}"
+<p-dialog
+  header="{{ modalType === 'signIn' ? 'Sign In' : 'Sign Up' }}"
+  [(visible)]="visible"
+  [modal]="true"
+  [style]="{ width: '25rem' }"
 >
-</app-authentication-modal> -->
+  <ng-template #footer>
+    <p-button
+      label="{{ modalType === 'signIn' ? 'Sign In' : 'Sign Up' }}"
+      (click)="visible = false"
+    />
+    <p-button label="Cancel" severity="danger" (click)="visible = false" />
+  </ng-template>
+</p-dialog>

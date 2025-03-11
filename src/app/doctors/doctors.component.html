@@ -3,21 +3,20 @@
   <app-chief></app-chief>
   <div class="doctors">
     <app-title tinyHeader="Professionals" header="Doctors"> </app-title>
+    <input
+      placeholder="Search..."
+      class="search"
+      type="text"
+      pInputText
+      [(ngModel)]="searchInput"
+      (input)="change($event)"
+    />
     <div class="cards">
       <app-kitchen-sink
-        src="assets/julia.jpg"
-        title="Dr. Julia"
-        subtitle="Pediater"
-      ></app-kitchen-sink>
-      <app-kitchen-sink
-        src="assets/michael.jpg"
-        title="Dr. Michael"
-        subtitle="Ortoped"
-      ></app-kitchen-sink>
-      <app-kitchen-sink
-        src="assets/amy.jpg"
-        title="Dr. Amy"
-        subtitle="Gynecologist"
+        *ngFor="let doctor of searchFilter"
+        src="{{ doctor.src }}"
+        title="{{ doctor.title }}"
+        subtitle="{{ doctor.subtitle }}"
       ></app-kitchen-sink>
     </div>
   </div>

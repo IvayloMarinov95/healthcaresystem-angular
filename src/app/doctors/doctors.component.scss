@@ -20,6 +20,9 @@
 }
 
 .search {
+  display: flex;
+  margin: 10px auto;
+  width: 50%;
   margin-bottom: 30px;
 }
 
@@ -48,5 +51,11 @@
 
   .cards {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: 70%;
   }
 }

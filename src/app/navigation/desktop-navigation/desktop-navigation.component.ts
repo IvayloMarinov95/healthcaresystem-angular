@@ -2,10 +2,19 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-desktop-navigation',
-  imports: [CommonModule, CarouselComponent, RouterLink, RouterLinkActive],
+  imports: [
+    CommonModule,
+    CarouselComponent,
+    RouterLink,
+    RouterLinkActive,
+    ButtonModule,
+    DialogModule,
+  ],
   templateUrl: './desktop-navigation.component.html',
   styleUrl: './desktop-navigation.component.scss',
 })
@@ -14,6 +23,8 @@ export class DesktopNavigationComponent implements OnInit, OnDestroy {
   scrolled: boolean = false;
   resized: boolean = false;
   pathname: string = '';
+  visible: boolean = false;
+  modalType: string = '';
 
   constructor(private router: Router) {}
 
@@ -42,5 +53,15 @@ export class DesktopNavigationComponent implements OnInit, OnDestroy {
     } else {
       this.resized = false;
     }
+  }
+
+  openSignInModal() {
+    this.visible = true;
+    this.modalType = 'signIn';
+  }
+
+  openSignUpModal() {
+    this.visible = true;
+    this.modalType = 'signUp';
   }
 }
