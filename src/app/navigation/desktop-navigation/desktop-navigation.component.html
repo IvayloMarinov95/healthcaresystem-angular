@@ -53,10 +53,33 @@
   [modal]="true"
   [style]="{ width: '25rem' }"
 >
+  <div
+    [style]="{ display: 'flex', alignItems: 'center', flexDirection: 'column' }"
+  >
+    <div class="inputField">
+      <div>
+        <label for="email">Email</label>
+      </div>
+      <input pInputText id="email" />
+    </div>
+    <div class="inputField">
+      <div>
+        <label for="email">Password</label>
+      </div>
+      <input pInputText id="password" />
+    </div>
+    <div class="signUp">
+      <label>If you don't have a registration</label>
+      <div>
+        <p-button [link]="true">Sign Up</p-button>
+      </div>
+    </div>
+  </div>
   <ng-template #footer>
     <p-button
       label="{{ modalType === 'signIn' ? 'Sign In' : 'Sign Up' }}"
       (click)="visible = false"
+      [style]="{ marginRight: '5px' }"
     />
     <p-button label="Cancel" severity="danger" (click)="visible = false" />
   </ng-template>

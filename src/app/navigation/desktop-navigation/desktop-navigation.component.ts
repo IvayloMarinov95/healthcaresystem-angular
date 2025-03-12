@@ -4,6 +4,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-desktop-navigation',
@@ -14,6 +15,8 @@ import { DialogModule } from 'primeng/dialog';
     RouterLinkActive,
     ButtonModule,
     DialogModule,
+    InputTextModule,
+    ButtonModule,
   ],
   templateUrl: './desktop-navigation.component.html',
   styleUrl: './desktop-navigation.component.scss',
